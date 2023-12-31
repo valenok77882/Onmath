@@ -1,10 +1,6 @@
 // Импорт фреймворка Express
 const express = require('express');
 const app = express();
-const session = require('express-session');
-const passport = require('passport');
-const localStrategy = require('passport-local');
-const flash = require('connect-flash');
 
 // Функция для проверки авторизирован ли пользователь
 function checkAuth() {
@@ -27,37 +23,6 @@ app.set('port', process.env.PORT || 3000);
 
 // Определение директории, где хранятся статические материалы (.css, .js для фронтенда, изображения)
 app.use(express.static(__dirname + '/public'));
-
-// Для регистраций
-passport.serializeUser((user, done) => done(null, user));
-passport.deserializeUser((user, done) => done(null, user));
-
-// Для добавления отправляемых json-ов в req.body
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-// Для инициализации сессии
-app.use(session({secret: 'you secret key'}));
-// Для создания flash-сообщений (надо для аутентификации)
-app.use(flash())
-// Для аутентификации
-app.use(passport.initialize());
-app.use(passport.session());
-
-// Установление стратегии (действий) при регистрации пользователя
-passport.use(
-	new localStrategy((user, password, done) => {
-		if (user !== 'test_user')
-			return done(null, false, {
-				message: 'User not found';
-			})
-		else if (password !== 'test_password')
-			return done(null, false, {
-				message: 'Wrong password';
-			})
-
-		return done(null, {id: 1, name: 'Test', age: 21});
-	})
-);
 
 
 // Домашняя страница
