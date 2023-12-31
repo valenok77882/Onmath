@@ -1,0 +1,37 @@
+// Синие цвета
+$dark-blue: #080b74;
+$blue: #1a1eb2;
+$dark-grey-blue: #303285;
+$grey-blue: #4e51d8;
+$light-grey-blue: #7375d8;
+$very-light-grey-blue: #8385e8;
+
+// Жёлтые цвета
+$very-dark-yellow: #a67b00;
+$dark-yellow: #bf9b30;
+$yellow: #ffbe00;
+$light-yellow: #ffce40;
+$very-light-yellow: #ffdb73;
+
+body {
+  background-color: $dark-blue;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding-top: 0;
+  overflow: none;
+
+  button {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  input {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+  }
+}
+

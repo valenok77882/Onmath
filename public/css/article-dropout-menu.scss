@@ -1,0 +1,77 @@
+// Синие цвета
+$dark-blue: #080b74;
+$blue: #1a1eb2;
+$dark-grey-blue: #303285;
+$grey-blue: #4e51d8;
+$light-grey-blue: #7375d8;
+$very-light-grey-blue: #8385e8;
+
+// Жёлтые цвета
+$very-dark-yellow: #a67b00;
+$dark-yellow: #bf9b30;
+$yellow: #ffbe00;
+$light-yellow: #ffce40;
+$very-light-yellow: #ffdb73;
+
+.dropout-menu {
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  display: grid;
+  grid-template-columns: 180px;
+  left: 0;
+  right: 0;
+  transition: height 0.15s, 
+              color 0.15s,
+              border-top 0.15s;
+}
+
+@media (min-width: 1200px) {
+  .dropout-menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding: none;
+    transition: height 0.15s, 
+                color 0.15s,
+                border-top 0.15s;
+  }
+}
+
+.dropout-menu .dropout-menu-button {
+  background-color: $blue;
+  border-top: 1px solid white;
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  padding: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.08s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px;
+  transition: background-color 0.15s;
+}
+
+.dropout-menu .dropout-menu-button:hover {
+  background-color: $grey-blue;
+}
+
+.dropout-menu .dropout-menu-button:active {
+  background-color: $light-grey-blue;
+}
+
+.dropout-menu img {
+  height: 20px;
+  margin-right: 10px;
+  transition: height 0.15s, 
+              color 0.15s,
+              border-top 0.15s;
+}
+
+a:any-link {
+  color: white;
+  text-decoration: none;
+}

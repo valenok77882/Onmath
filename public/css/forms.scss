@@ -1,0 +1,52 @@
+// Синие цвета
+$dark-blue: #080b74;
+$blue: #1a1eb2;
+$dark-grey-blue: #303285;
+$grey-blue: #4e51d8;
+$light-grey-blue: #7375d8;
+$very-light-grey-blue: #8385e8;
+$very-very-light-grey-blue: #9395f8;
+
+.reg-container {
+  background-color: $grey-blue;
+  border-radius: 20px;
+  padding: 20px;
+
+  p {
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .form-pair {
+    display: grid;
+    grid-template-rows: 20px 25px;
+    
+    .form-input {
+      background-color: $light-grey-blue;
+      padding-left: 12px;
+      font-size: 16px;
+      max-width: 400px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .form-submit-button {
+    background-color: $light-grey-blue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: $very-light-grey-blue;
+    }
+
+    &:active {
+      background-color: $very-very-light-grey-blue;
+    }
+  }
+}

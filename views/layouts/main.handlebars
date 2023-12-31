@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      Название темы
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/article-global.css">
+    <link rel="stylesheet" href="/css/article-upper-menu.css">
+    <link rel="stylesheet" href="/css/article-text.css">
+    <link rel="stylesheet" href="/css/article.css">
+    <link rel="stylesheet" href="/css/article-dropout-menu.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <meta http-equiv = "content-type" content = "text/html; charset = utf-8">
+  </head>
+  <body>
+    <!--
+      Верхнее меню
+    -->
+    <div class="upper-menu">
+      <button onclick="menuButtonClick()" class="menu-dropout-button">
+        <img src="/img/menu-icon.png"> 
+        <div class="hiding-text">
+          Меню
+        </div>
+      </button>
+
+      <div class="search-topic-section">
+        <div class="input-button-pair">
+          <input type="text" placeholder="Введите тему">
+          <button class="search-button">
+            <img src="/img/search-icon.png">
+            <div class="hiding-text">
+              Поиск
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <button class="profile-button">
+        <img src="/img/user-icon.png">
+        <div class="hiding-text">
+          Профиль
+        </div>
+      </button>
+    </div>
+
+    <!--
+      Выпадающее меню
+    -->
+    <div class="dropout-menu"></div>
+
+    <!--
+      Основной текст
+    -->
+    <div class="not-upper-menu">
+      <div class="main-frame">
+        {{{body}}}
+      </div>  
+    </div>
+
+    <script src="/js/upperMenu.js"></script>
+  </body>
+</html>

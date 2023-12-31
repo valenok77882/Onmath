@@ -1,0 +1,64 @@
+// Синие цвета
+$dark-blue: #080b74;
+$blue: #1a1eb2;
+$dark-grey-blue: #303285;
+$grey-blue: #4e51d8;
+$light-grey-blue: #7375d8;
+$very-light-grey-blue: #8385e8;
+
+// Жёлтые цвета
+$very-dark-yellow: #a67b00;
+$dark-yellow: #bf9b30;
+$yellow: #ffbe00;
+$light-yellow: #ffce40;
+$very-light-yellow: #ffdb73;
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+  column-gap: 10px;
+  row-gap: 30px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article {
+  background-color: $grey-blue;
+  border-radius: 30px;
+  padding: 5px 20px 20px 20px;
+  display: grid;
+  grid-template-rows: 1fr 30px 40px;
+  row-gap: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  .image {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: $light-grey-blue;
+    padding-top: 3px;
+    border-radius: 8px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: center;
+    background-color: $very-light-grey-blue;
+    align-items: center;
+    padding-top: 3px;
+    border-radius: 8px;
+  }
+}

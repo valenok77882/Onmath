@@ -1,0 +1,66 @@
+// Синие цвета
+$dark-blue: #080b74;
+$blue: #1a1eb2;
+$dark-grey-blue: #303285;
+$grey-blue: #4e51d8;
+$light-grey-blue: #7375d8;
+$very-light-grey-blue: #8385e8;
+
+// Жёлтые цвета
+$very-dark-yellow: #a67b00;
+$dark-yellow: #bf9b30;
+$yellow: #ffbe00;
+$light-yellow: #ffce40;
+$very-light-yellow: #ffdb73;
+
+.not-upper-menu {
+  position: absolute;
+  bottom: 20px;
+  top: 120px;
+  z-index: -1;
+  left: 60px;
+  right: 60px;
+  border-radius: 20px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    background-color: $blue;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: $grey-blue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-grey-blue;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+  @media (min-width: 1200px) {
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 1080px;
+  }
+
+  .main-frame {
+    background-color: $dark-grey-blue;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+  
+    .main-image {
+      height: 110px;
+      border-radius: 20px;
+      border: 1px black solid;
+      margin: 10px;
+    }
+  }
+  
+}
